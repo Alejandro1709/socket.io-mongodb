@@ -1,11 +1,11 @@
-import { connect } from "mongoose";
-import { MONGO_URI_DEV } from "./config";
+import { connect } from 'mongoose';
+import { MONGO_URI_DEV } from './config';
 
 export const connectDb = async () => {
   try {
-    await connect(MONGO_URI_DEV)
-    console.log("Connected to database")
+    await connect(MONGO_URI_DEV);
+    console.log('Connected to database');
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-}
+};

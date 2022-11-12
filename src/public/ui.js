@@ -1,10 +1,11 @@
-import { saveNote } from "./socket.js"
+import { saveNote } from './socket.js';
 
-export const renderNotes = (notes) => {
-  notes.forEach(note => {
-    const newEl = document.createElement('li')
+const list = document.querySelector('#list');
 
-    newEl.innerHTML = `
+const noteUi = (note) => {
+  const newEl = document.createElement('li');
+
+  newEl.innerHTML += `
       <div class="note">
         <div class="note-details">
           <h2>${note.title}</h2>
@@ -15,17 +16,21 @@ export const renderNotes = (notes) => {
           <button class="delete-btn">Delete</button>
         </div>
       </div>
-    `
+    `;
+  return newEl;
+};
 
-    list.appendChild(newEl)
-  });
-}
+export const renderNotes = (notes) => {
+  notes.forEach((note) => list.append(noteUi(note)));
+};
 
-export const onHandleSubmit = e => {
-  e.preventDefault()
+export const onHandleSubmit = (e) => {
+  e.preventDefault();
 
-  const input = document.querySelector("#title")
-  const desc = document.querySelector("#description")
+  const input = document.querySelector('#title');
+  const desc = document.querySelector('#description');
 
-  saveNote(input.value, desc.value)
-}
+  saveNote(input.value, desc.value);
+};
+
+export const appendNote = (note) => {};

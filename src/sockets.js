@@ -10,10 +10,10 @@ export default (io) => {
 
     emitNotes();
 
-    socket.on("newnote", async (note) => {
+    socket.on("client:newnote", async (note) => {
       const newNote = new Note(note)
       const savedNote = await newNote.save()
-      socket.emit('', savedNote)
+      socket.emit('server:newnote', savedNote)
     })
   })
 }

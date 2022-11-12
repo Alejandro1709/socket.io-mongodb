@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Sockets CRUD</title>
-</head>
-<body>
- <header>
-  <form id="form">
-    <div class="form-group">
-      <label for="title">Post Title:</label>
-      <input id="title" type="text" />
-    </div>
-    <div class="form-group">
-      <label for="description">Post Body:</label>
-      <textarea id="description" rows="3"></textarea>
-    </div>
-    <button type="submit">Add Note</button>
-  </form>
- </header>
- <main>
-  <ul id="list" role="list"></ul>
- </main>
-  <script src="/socket.io/socket.io.js"></script>
-  <script type="module" src="./main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Sockets CRUD</title>
+  </head>
+  <body>
+    <header>
+      <form id="form">
+        <div class="form-group">
+          <label for="title">Post Title:</label>
+          <input id="title" type="text" />
+        </div>
+        <div class="form-group">
+          <label for="description">Post Body:</label>
+          <textarea id="description" rows="3"></textarea>
+        </div>
+        <button type="submit">Add Note</button>
+      </form>
+    </header>
+    <main>
+      <ul id="list" role="list"></ul>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>

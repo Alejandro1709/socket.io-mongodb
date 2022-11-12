@@ -1,5 +1,5 @@
-import { config } from "dotenv";
+import { config } from 'dotenv';
 
-config()
+config();
 
-export const MONGO_URI_DEV = process.env.MONGO_URI_DEV
+export const MONGO_URI_DEV = process.env.MONGO_URI_DEV;

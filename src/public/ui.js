@@ -33,4 +33,6 @@ export const onHandleSubmit = (e) => {
   saveNote(input.value, desc.value);
 };
 
-export const appendNote = (note) => {};
+export const appendNote = (note) => {
+  list.append(noteUi(note));
+};

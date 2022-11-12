@@ -1,7 +1,7 @@
 import { loadNotes, onNewNote } from './socket.js';
-import { onHandleSubmit, renderNotes } from './ui.js';
+import { appendNote, onHandleSubmit, renderNotes } from './ui.js';
 
-onNewNote();
+onNewNote(appendNote);
 
 loadNotes(renderNotes);
 

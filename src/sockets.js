@@ -1,6 +1,13 @@
+import Note from './models/note';
+
 export default (io) => {
   io.on("connection", socket => {
-    console.log("New user connected", socket.handshake)
-    socket.on("disconnect", () => console.log("User disconnected"))
+   
+    const emitNotes = async () => {
+      const notes = await Note.find();
+      io.emit("loadnotes", notes);
+    }
+
+    emitNotes();
   })
 }

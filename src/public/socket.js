@@ -9,8 +9,14 @@ export const loadNotes = () => {
 
       newEl.innerHTML = `
         <div class="note">
-          <h2>${note.title}</h2>
-          <p>${note.description}</p>
+          <div class="note-details">
+            <h2>${note.title}</h2>
+            <p>${note.description}</p>
+          </div>
+          <div class="note-btns">
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </div>
         </div>
       `
 

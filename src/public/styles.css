@@ -52,7 +52,14 @@ main {
   flex-direction: column;
   background-color: #eee;
   padding: 0.8rem;
+  gap: 1rem;
   user-select: none;
+}
+
+.note-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem
 }
 
 .form-group {

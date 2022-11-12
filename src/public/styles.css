@@ -16,6 +16,13 @@ header {
   margin-top: 4rem;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
 #form {
   display: flex;
   flex-direction: column;
@@ -27,6 +34,25 @@ header {
   padding: 2rem;
   background-color: #fff;
   border-radius: 0.5rem;
+}
+
+#list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 700px;
+  padding: 1.6rem;
+  background-color: #fff;
+  list-style: none;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  background-color: #eee;
+  padding: 0.8rem;
+  user-select: none;
 }
 
 .form-group {

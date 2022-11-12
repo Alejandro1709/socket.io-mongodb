@@ -9,5 +9,11 @@ export default (io) => {
     }
 
     emitNotes();
+
+    socket.on("newnote", async (note) => {
+      const newNote = new Note(note)
+      const savedNote = await newNote.save()
+      console.log(savedNote)
+    })
   })
 }
